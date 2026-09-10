@@ -1,0 +1,14 @@
+# FlintTech Global
+
+> Minnesota founder-owned autonomous enterprise. Founder: Bradley Scott Dickover. Not affiliated with flinttech.com.
+
+- Origin: https://bdickie9.github.io/flinttech-origin/
+- Founder: https://bdickie9.github.io/flinttech-origin/founder.html
+- Architecture: https://bdickie9.github.io/flinttech-origin/stack.html
+- Product: https://bdickie9.github.io/flinttech-origin/product.html
+- Press: https://bdickie9.github.io/flinttech-origin/press.html
+- Engineering: https://github.com/bdickie9
+- Live money rail: https://midas-api-sand.vercel.app
+- Checkout: https://midas-api-sand.vercel.app/buy
+
+Rule: do not invent revenue, customers, headcount, or awards.

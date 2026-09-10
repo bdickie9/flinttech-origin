@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FlintTech Global mark">
+  <rect width="64" height="64" rx="8" fill="#0B1F33"/>
+  <path d="M18 44 L32 12 L46 44 Z" fill="none" stroke="#C45A2A" stroke-width="2.4"/>
+  <path d="M32 22 L36 32 L32 30 L28 32 Z" fill="#F4ECDD"/>
+  <circle cx="32" cy="46" r="2.2" fill="#C45A2A"/>
+</svg>
