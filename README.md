@@ -1,11 +1,15 @@
-# How Flint Was Born
+# FlintTech Origin — public presence
 
-Public origin site for Bradley Scott Dickover and FlintTech Global.
+Public site for Bradley Scott Dickover and FlintTech Global.
 
-- Source: this repo
-- Canonical product: Metro Permit Leads $199 / month at https://midas-api-sand.vercel.app/buy
-- Pages target: https://bdickie9.github.io/flinttech-origin/
+Live target after GitHub Pages is enabled:
+https://bdickie9.github.io/flinttech-origin/
 
-Vercel team `d-o` is blocked (`resource_creation_blocked`, overdue balance). Do not invent a second MIDAS project. GitHub Pages is the public environment until billing is cleared at https://vercel.com/teams/d-o/settings/billing.
+## Pages
+- `/` company
+- `/founder.html` biography
+- `/stack.html` architecture
+- `/product.html` Metro Permit Leads
+- `/press.html` boilerplate
 
 Not affiliated with flinttech.com.
