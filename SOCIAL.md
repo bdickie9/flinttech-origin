@@ -1,33 +1,27 @@
-# Channel copy — paste ready
+# FLINTTECH — Founder public-profile copy
 
-Canonical handles: GitHub bdickie9 · X @bdickie9
-Do not claim sales. paid_sessions is only real after a paid webhook.
-
-## X / @bdickie9 profile
-Name: Bradley Dickover
-Bio: Founder & CEO, FlintTech Global. Minnesota. I build companies that close their own loops. No invented scoreboard.
-Location: Minnesota, USA
-Website: https://bdickie9.github.io/flinttech-origin/
-
-Pinned draft:
-FlintTech Global is not a chatbot with a logo.
-It is a Minnesota company that watches live endpoints, sells a real product, and refuses invented revenue.
-Founder: me.
-Origin: https://bdickie9.github.io/flinttech-origin/
-Product: https://midas-api-sand.vercel.app/buy
-Not flinttech.com.
+Brand: FLINTTECH (all caps). Founder: Bradley Dickover. Full name: Bradley Scott Dickover.
+Only list independently verified deployments, awards, customer outcomes, or financial results.
 
 ## LinkedIn headline
-Founder & CEO, FlintTech Global · Building measured autonomous enterprise systems
+Founder, FLINTTECH | AI Systems Architecture | Autonomous Workflows | Accountable Execution
 
 ## LinkedIn about
-I founded FlintTech Global to solve a narrow problem: software can now draft a product, but most AI companies still invent the scoreboard.
+I founded FLINTTECH to explore how intelligent software can move beyond generating answers and become dependable infrastructure for real-world work.
 
-Flint is a founder-owned Minnesota company. The stack is explicit. Echo perceives live systems. Meridian publishes only measured state. Sovereign OS holds policy. MIDAS is the money rail. Helix is the demand-to-settlement loop.
+My engineering portfolio includes FLINT CONTINUUM, MIDAS, APEX, and related research in AI orchestration, controlled execution, provenance, and business operations. I focus on separating intelligence from authority, preserving evidence, and evaluating whether systems achieve their intended outcomes.
 
-The first public product is Metro Permit Leads — a bounded seat for Minneapolis and Saint Paul trades.
+My approach is straightforward: build useful technology, measure what actually works, document limitations, and improve through testing.
 
-I do not claim current models are sentient. I do insist that systems with memory, tools, and money access get a constitution, a ledger, and a human owner.
+Founder vision: Build for humanity. Engineer for truth. Design for generations.
 
-GitHub: github.com/bdickie9
-Site: bdickie9.github.io/flinttech-origin
+Engineering portfolio: https://github.com/bdickie9
+Company: https://bdickie9.github.io/flinttech-origin/
+
+## Short X bio
+Founder of FLINTTECH. Building accountable AI systems and verifiable autonomous workflows. Engineering over hype.
+
+## Suggested pinned post
+I'm building FLINTTECH around a simple principle: intelligent systems should be judged by what they can reliably accomplish, not what they claim. I'm sharing the engineering journey, architecture, tests, and lessons as the work develops.
+
+https://bdickie9.github.io/flinttech-origin/
