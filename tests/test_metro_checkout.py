@@ -44,6 +44,12 @@ class MetroCheckoutTests(unittest.TestCase):
             page.feed(html)
             self.assertTrue(page.inquiries, name)
 
+    def test_press_copy_and_product_route_match_the_current_offer(self):
+        press = (ROOT / "press.html").read_text()
+        self.assertNotIn("Saint Paul", press)
+        self.assertIn('href="product.html">Metro product and sample inquiry', press)
+        self.assertNotIn("is 402 until", (ROOT / "product.html").read_text())
+
     def test_operator_readme_agrees_with_checkout_account(self):
         readme = (ROOT / "README.md").read_text()
         self.assertIn(CANONICAL, readme)
