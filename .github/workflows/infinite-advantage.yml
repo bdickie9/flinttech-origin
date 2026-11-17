@@ -1,0 +1,31 @@
+name: Infinite Advantage validation
+on:
+  push:
+    paths:
+      - 'infinite-advantage/**'
+      - '.github/workflows/infinite-advantage.yml'
+  pull_request:
+    paths:
+      - 'infinite-advantage/**'
+      - '.github/workflows/infinite-advantage.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: infinite-advantage
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify source is present
+        run: test -f flintcore/engine.py && test -f flintcore/webapp.py && test -f Dockerfile
+      - name: Compile
+        run: python -m compileall -q flintcore tests
+      - name: Test
+        run: python -m unittest discover -s tests -v
+      - name: Build container
+        run: docker build -t flinttech-infinite:test .
