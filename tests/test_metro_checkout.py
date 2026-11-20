@@ -5,34 +5,34 @@ import unittest
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-CANONICAL = "https://buy.stripe.com/5kQ6oH1qR94M7aZeyBeZ212"
+SAMPLE_CONTACT = "mailto:f1intt3ch@gmail.com?subject=Metro%20Permit%20Leads%20sample%20and%20delivery"
 
 
 class Links(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.stripe = []
+        self.checkout_links = []
         self.inquiries = []
 
     def handle_starttag(self, tag, attrs):
         href = dict(attrs).get("href", "")
-        if tag == "a" and urlsplit(href).hostname == "buy.stripe.com":
-            self.stripe.append(href)
-        if tag == "a" and href.startswith("mailto:"):
+        if tag != "a":
+            return
+        url = urlsplit(href)
+        if (url.hostname in {"buy.stripe.com", "checkout.stripe.com"}
+                or (url.hostname == "midas-api-sand.vercel.app" and url.path.rstrip("/") == "/buy")):
+            self.checkout_links.append(href)
+        if href.startswith("mailto:"):
             self.inquiries.append(href)
 
 
 class MetroCheckoutTests(unittest.TestCase):
-    def test_all_public_stripe_anchors_use_the_approved_destination(self):
-        counts = {}
-        for path in ROOT.glob("*.html"):
-            page = Links()
-            page.feed(path.read_text())
-            for href in page.stripe:
-                self.assertEqual(href, CANONICAL, str(path))
-            if page.stripe:
-                counts[path.name] = len(page.stripe)
-        self.assertEqual(counts, {"index.html": 2, "product.html": 1})
+    def test_public_pages_offer_no_direct_checkout(self):
+        for path in ROOT.rglob("*.html"):
+            with self.subTest(page=path.name):
+                page = Links()
+                page.feed(path.read_text())
+                self.assertEqual(page.checkout_links, [])
 
     def test_new_sales_scope_has_no_unverified_city_or_exclusive_seat(self):
         for name in ["index.html", "product.html"]:
@@ -42,7 +42,7 @@ class MetroCheckoutTests(unittest.TestCase):
             self.assertIn("confirm your trade and delivery schedule", html)
             page = Links()
             page.feed(html)
-            self.assertTrue(page.inquiries, name)
+            self.assertIn(SAMPLE_CONTACT, page.inquiries, name)
 
     def test_press_copy_and_product_route_match_the_current_offer(self):
         press = (ROOT / "press.html").read_text()
@@ -52,7 +52,8 @@ class MetroCheckoutTests(unittest.TestCase):
 
     def test_operator_readme_agrees_with_checkout_account(self):
         readme = (ROOT / "README.md").read_text()
-        self.assertIn(CANONICAL, readme)
+        self.assertNotIn("buy.stripe.com", readme)
+        self.assertIn("plink_1UHSKmEYm87XGaC5IVhIkF5B", readme)
         self.assertIn("acct_1TaUSsEYm87XGaC5", readme)
         self.assertNotIn("6oU5kF62efuW1GP41U7Zu18", readme)
 
